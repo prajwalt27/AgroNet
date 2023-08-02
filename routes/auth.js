@@ -26,10 +26,10 @@ app.post("/login", (req, res) => {
     } else {
       passport.authenticate("local")(req, res, () => {
         if (req.user.isStaff) {
-          console.log(req.user);
+          console.log(req.user + "this is the user");
           return res.redirect("/profile");
         }
-        res.redirect("/crops");
+        return res.redirect("/crops");
       });
     }
   });

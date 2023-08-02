@@ -10,10 +10,11 @@ router.get("/crops", (req, res) => {
     result = locationModel.findOne(
       { name: req.user.location },
       (err, result) => {
-        console.log(result);
+        // console.log(req.user + " result it is");
         if (err) {
           console.log(err);
-          res.redirect("/login");
+
+          return res.redirect("/login");
         } else {
           if (result && result.crops) {
             let crops = result.crops;
@@ -50,6 +51,7 @@ router.get("/crops", (req, res) => {
                   cityName: req.user.location,
                 });
               });
+              return;
             });
           } else {
             console.log(

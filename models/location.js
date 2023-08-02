@@ -49,4 +49,4 @@ const locationSchema = new mongoose.Schema({
   ],
 });
 
-module.exports = mongoose.model("locations", locationSchema);
+module.exports = mongoose.model("agrocats", locationSchema);
