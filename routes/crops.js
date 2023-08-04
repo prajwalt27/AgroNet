@@ -20,7 +20,7 @@ router.get("/crops", (req, res) => {
             let crops = result.crops;
 
             let cityName = req.user.location;
-            var appID = "4e601e5df3392674023630b8c8d88080";
+            var appID = process.env.OPEN_WEATHER_MAP_API_KEY;
             var units = "metric";
             const url =
               "https://api.openweathermap.org/data/2.5/weather?q=" +

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    </style>
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/cropsInfoStyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,9 +15,9 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: #b4ca65;">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top" style="background-color: #4CAF50;">
         <div class="container">
             <a class="navbar-brand" href="#">AgroNet</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -46,7 +49,7 @@
 
     </div>
 
-    <h3 style="text-align: center;">Crops Available in <%= cityName %> are </h3>
+    <h3 style="text-align: center; background-color: #b4ca65; ">Crops Available in <%= cityName %> are </h3>
     <section class="wrapper">
         <div class="container-fostrap">
             <div class="content">
@@ -54,7 +57,7 @@
                     <div class="row">
                         <% for(let i=0;i<crops.length;i++){ %>
                             <div class="col-xs-12 col-sm-4">
-                                <div class="card">
+                                <div class="card" style="background-color: #90a93a;">
                                     <a class="img-card" href="">
                                         <img src="img/<%= crops[i].name %>.jpg" />
                                     </a>
